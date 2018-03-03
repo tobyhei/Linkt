@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linkt", "Linkt\Linkt.csproj", "{44AEE2BA-10D1-42ED-AB26-D453588B137E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linkt.Tests", "Linkt.Tests\Linkt.Tests.csproj", "{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AEE2BA-10D1-42ED-AB26-D453588B137E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AEE2BA-10D1-42ED-AB26-D453588B137E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AEE2BA-10D1-42ED-AB26-D453588B137E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AEE2BA-10D1-42ED-AB26-D453588B137E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EA1B22F-63C4-40B7-87E3-23B90C42DED4}
+	EndGlobalSection
+EndGlobal
