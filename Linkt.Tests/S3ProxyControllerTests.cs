@@ -1,23 +1,15 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 using Xunit;
-using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using Amazon.Lambda.APIGatewayEvents;
 
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-
-using Amazon;
 using Amazon.S3;
 using Amazon.S3.Util;
-using Amazon.S3.Model;
-
-using Linkt;
 
 
 namespace Linkt.Tests

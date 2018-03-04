@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linkt", "Linkt\Linkt.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linkt.Tests", "Linkt.Tests\Linkt.Tests.csproj", "{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3316F96D-BC2F-4960-B6CA-62923380D0C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D4918510-652A-4DF8-91B5-FBA38FF9ABAE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Link.Domain", "Link.Domain\Link.Domain.fsproj", "{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,18 @@ Global
 		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44AEE2BA-10D1-42ED-AB26-D453588B137E} = {3316F96D-BC2F-4960-B6CA-62923380D0C9}
+		{32EE40C4-9C28-4BFB-8EEA-1473BF4A4686} = {D4918510-652A-4DF8-91B5-FBA38FF9ABAE}
+		{C5B53FC3-2AE0-45E9-BB84-79DEE94038CF} = {3316F96D-BC2F-4960-B6CA-62923380D0C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2EA1B22F-63C4-40B7-87E3-23B90C42DED4}

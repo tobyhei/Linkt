@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using System.IO;
 
 namespace Linkt
 {
@@ -21,10 +15,6 @@ namespace Linkt
         /// needs to be configured in this method using the UseStartup<>() method.
         /// </summary>
         /// <param name="builder"></param>
-        protected override void Init(IWebHostBuilder builder)
-        {
-            builder
-                .UseStartup<Startup>();
-        }
+        protected override void Init(IWebHostBuilder builder) => builder.UseStartup<Startup>();
     }
 }
