@@ -12,7 +12,7 @@
     "framework"     : "netcoreapp2.0",
     "s3-prefix"     : "Linkt/",
     "template"      : "serverless.template",
-    "template-parameters" : "\"ShouldCreateBucket\"=\"true\";\"BucketName\"=\"\"",
+    "template-parameters" : "\"ShouldCreateTable\"=\"true\";\"LinkTableName\"=\"\"",
     "s3-bucket"           : "tobystestlambda",
     "stack-name"          : "link",
     "stack-wait"          : false

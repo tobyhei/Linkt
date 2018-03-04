@@ -1,39 +1,44 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Linkt.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Linkt
 {
     public class Startup
     {
-        public const string AppS3BucketKey = "AppS3Bucket";
-
         public Startup(IConfiguration configuration)
         {
+            Environment = System.Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             Configuration = configuration;
         }
 
-        public static IConfiguration Configuration { get; private set; }
+        public string Environment { get; }
+        public IConfiguration Configuration { get; private set; }
 
-        // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
 
-            // Add S3 to the ASP.NET Core dependency injection framework.
-            services.AddAWSService<Amazon.S3.IAmazonS3>();
+            services.ConfigureDynamoDb(Environment == "Development");
+
+            services.AddSingleton<LinkRepository>();
+
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info { Version = "v1", Title = "Linkt API" }));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Linkt API V1");
+            });
         }
     }
 }
